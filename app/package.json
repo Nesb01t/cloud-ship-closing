@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:android": "ionic capacitor open android",
     "build": "vue-tsc && vite build",
     "build:android": "ionic capacitor build android",
     "preview": "vite preview",
