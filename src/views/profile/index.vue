@@ -11,8 +11,8 @@ import ProfileUserForm from '@/views/profile/components/user-form/index.vue';
 import AdminMsg from '@/views/profile/components/admin-msg/index.vue';
 import LoadingMask from '@/components/loading-mask/index.vue';
 // about avatar
-const handleUploaded = async (date) => {
-  if (date) {
+const handleUploaded = async (data: boolean) => {
+  if (data) {
     await toast('上传成功');
     await refresh();
   }
@@ -50,9 +50,9 @@ const openAdminResume = async () => {
 // mounted
 const cardKey = ref(0);
 const refresh = async () => {
-  cardKey.value++;
   const { data } = await fetchUserInfo();
   user.value = data;
+  cardKey.value++;
 };
 onMounted(refresh);
 </script>

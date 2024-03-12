@@ -23,7 +23,7 @@ const upload = async () => {
 
       await alert();
       if (uploaded && userChoice.value) {
-        emit('uploaded', uploaded);
+        emit('uploaded', true);
       }
     } catch (error) {
       console.log('avatar-upload', error);
